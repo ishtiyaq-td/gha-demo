@@ -1,0 +1,12 @@
+---
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: flask-demo-app:latest
+    container_name: flask-demo-container
+    ports:
+      - "5555:5000"
+    environment:
+      - FLASK_ENV=development
